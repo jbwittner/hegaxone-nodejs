@@ -1,7 +1,14 @@
-const world = 'world';
+import { initService } from "@domain/ProductService";
+import { Product } from "@domain/entity/Product";
+import { SPIProduct } from "@domain/spi/SpiProduct";
 
-export function hello(who: string = world): string {
-  return `Hello ${who}! `;
+const spiProductIn: SPIProduct = {
+
+    findAllProducts: function (): Product[] {
+        throw new Error("Function findAllProducts not implemented.");
+    }
 }
 
-console.log(hello('toto'))
+const apiProductService = initService(spiProductIn);
+
+apiProductService.create(4)

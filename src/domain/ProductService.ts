@@ -20,7 +20,7 @@ const surveyRepo: ApiProduct = {
         throw new Error("Function not implemented.");
     },
     create: function (data: number): Product {
-        throw new Error("Function not implemented.");
+        throw new Error("Function create not implemented.");
     },
     listProducts: function (): Product[] {
         throw new Error("Function not implemented.");

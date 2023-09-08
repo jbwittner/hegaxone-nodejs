@@ -1,4 +1,4 @@
-import { Product } from "../entity/Product";
+import { Product } from "../model/Product";
 
 export type GetProductById = (id: string) => Product;
 

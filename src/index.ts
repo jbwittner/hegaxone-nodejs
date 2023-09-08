@@ -1,5 +1,5 @@
-import { initService } from "./domain/ProductService";
-import { Product } from "./domain/entity/Product";
+import { initService } from "./domain/service/ProductService";
+import { Product } from "./domain/model/Product";
 import { SPIProduct } from "./domain/spi/SpiProduct";
 
 const spiProductIn: SPIProduct = {

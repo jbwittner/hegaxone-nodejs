@@ -1,6 +1,6 @@
-import { ApiProduct } from "./api/ApiProductInterface";
-import { Product } from "./entity/Product";
-import { SPIProduct } from "./spi/SpiProduct";
+import { ApiProduct } from "../api/ApiProductInterface";
+import { Product } from "../model/Product";
+import { SPIProduct } from "../spi/SpiProduct";
 
 
 let spiProduct: SPIProduct;

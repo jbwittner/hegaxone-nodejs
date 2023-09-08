@@ -1,6 +1,5 @@
 import { Product } from "../entity/Product";
 
-
 export type GetProductById = (id: string) => Product;
 
 export type ApiProduct = {

@@ -1,21 +1,14 @@
-import { ApiProduct } from "../domain/api/ApiProductInterface";
+import { initService } from "../domain/ProductService";
 import { Product } from "../domain/entity/Product";
+import { SPIProduct } from "../domain/spi/SpiProduct";
 
-export const surveyRepo: ApiProduct = {
-    toto : (plou: number) => {
-        throw new Error("Function not implemented.");
-    },
-    getProductById: function (): Product {
-        throw new Error("Function not implemented.");
-    },
-    create: function (data: number): Product {
-        throw new Error("Function not implemented.");
-    },
-    listProducts: function (): Product[] {
+const spiProductIn: SPIProduct = {
+
+    findAllProducts: function (): Product[] {
         throw new Error("Function not implemented.");
     }
 }
 
-const tata = surveyRepo.toto("String")
+const apiProductService = initService(spiProductIn);
 
-console.log(tata)
+apiProductService.create(4)

@@ -5,7 +5,8 @@ import { SPIProduct } from "./domain/spi/SpiProduct";
 const spiProductIn: SPIProduct = {
 
     findAllProducts: function (): Product[] {
-        throw new Error("Function findAllProducts not implemented.");
+        console.log("Function findAllProducts not implemented.");
+        return [];
     }
 }
 

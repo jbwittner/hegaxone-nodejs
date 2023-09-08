@@ -20,7 +20,15 @@ const surveyRepo: ApiProduct = {
         throw new Error("Function not implemented.");
     },
     create: function (data: number): Product {
-        throw new Error("Function create not implemented.");
+        console.log("Function create not implemented.");
+        const titou : Product = {
+            id: "",
+            name: "",
+            price: 0,
+            quantity: 0
+        }
+        spiProduct.findAllProducts();
+        return titou;
     },
     listProducts: function (): Product[] {
         throw new Error("Function not implemented.");

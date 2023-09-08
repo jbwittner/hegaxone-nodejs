@@ -1,9 +1,12 @@
 import { SPIProduct } from "../../domain/spi/SpiProduct";
+import { AppLogger } from "../../domain/utils/Logger";
 
 export class ProductRepository implements SPIProduct {
 
+    constructor(private logger: AppLogger){}
+
     findAllProducts = () => {
-        console.log("Repository find all product")
+        this.logger.warn("Repository find all product")
         return []
     }
 }

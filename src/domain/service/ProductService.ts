@@ -1,9 +1,10 @@
 import { ApiProductInterface } from "../api/ApiProductInterface";
 import { Product } from "../model/Product";
 import { SPIProduct } from "../spi/SpiProduct";
+import { AppLogger } from "../utils/Logger";
 
 export class ApiProductService implements ApiProductInterface {
-    constructor(private spiProductIn: SPIProduct){}
+    constructor(private spiProductIn: SPIProduct, private logger: AppLogger){}
 
     toto = (id: string) => {
         const product: Product = {
@@ -36,7 +37,7 @@ export class ApiProductService implements ApiProductInterface {
     };
 
     listProducts  = () => {
-        console.log("Domain listProduct")
+        this.logger.info("Domain listProduct")
         this.spiProductIn.findAllProducts();
         return []
     };

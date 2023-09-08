@@ -31,6 +31,8 @@ const surveyRepo: ApiProduct = {
         return titou;
     },
     listProducts: function (): Product[] {
-        throw new Error("Function not implemented.");
+        console.log("Function listProducts not implemented.");
+        spiProduct.findAllProducts();
+        return [];
     }
 }

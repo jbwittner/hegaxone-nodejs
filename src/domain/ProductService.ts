@@ -1,17 +1,17 @@
 import { ApiProductInterface, ListProducts, SearchProducts } from "./api/ApiProduct";
 import { Product } from "./entity/Product";
-import { FindAllProducts } from "./spi/SpiProduct";
+import { SPI } from "./spi/SpiProduct";
 
 export class ProductService implements ApiProductInterface {
-  constructor(private findAllProducts: FindAllProducts) {}
+  constructor(private spi: SPI) {}
   
   searchProducts: SearchProducts = (productName: string) => {
-    const products = this.findAllProducts();
+    const products = this.spi.findAllProducts();
     return products.filter((product: Product) => product.name === productName);
   };
 
   listProducts: ListProducts = () => {
-    return this.findAllProducts();
+    return this.spi.findAllProducts();
   };
 
 }

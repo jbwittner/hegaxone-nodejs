@@ -11,5 +11,5 @@ export interface ApiProductInterface {
 }
 
 export const api = (spi: SPI): ApiProductInterface => {
-  return new ProductService(spi.findAllProducts);
+  return new ProductService(spi);
 };

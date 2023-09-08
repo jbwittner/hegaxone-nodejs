@@ -1,16 +1,9 @@
-import { spiProductIn } from "../adapters/secondary/SpiProductImpl";
-import { ApiProduct } from "../domain/api/ApiProductInterface";
-import { initService } from "../domain/service/ProductService";
+import { ProductRepository } from "../adapters/secondary/SpiProductImpl";
+import { ApiProductService } from "../domain/service/ProductService";
+import { initControllerAndInject } from "./ExpressConf";
 
-let apiProductService: ApiProduct;
-
-export const makeInjection = () => {
-    apiProductService = initService(spiProductIn);
+export const inject = () => {
+    const productRepository: ProductRepository = new ProductRepository();
+    const apiProductService: ApiProductService = new ApiProductService(productRepository);
+    initControllerAndInject(apiProductService);
 }
-
-export {apiProductService};
-
-
-
-
-

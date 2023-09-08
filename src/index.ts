@@ -1,5 +1,5 @@
 import { startExpressServer } from "./config/ExpressConf";
-import { makeInjection } from "./config/Injection";
+import { inject } from "./config/Injection";
 
-makeInjection()
+inject();
 startExpressServer(8080);

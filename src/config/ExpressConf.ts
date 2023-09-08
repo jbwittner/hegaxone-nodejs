@@ -1,7 +1,7 @@
 import express from 'express'
 import { apiProductController } from '../adapters/primary/ApiProductExpres';
 import { ApiProductService } from '../domain/service/ProductService';
-import { AppLogger } from '../domain/utils/Logger';
+import { AppLogger } from '../utils/Logger';
 
 export const app = express();
 

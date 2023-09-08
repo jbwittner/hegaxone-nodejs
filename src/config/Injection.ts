@@ -1,7 +1,6 @@
 import { ProductRepository } from "../adapters/secondary/SpiProductImpl";
 import { ApiProductService } from "../domain/service/ProductService";
-import { AppLogger } from "../domain/utils/Logger";
-import { LoggerImpl } from "../utils/LoggerImpl";
+import { AppLogger, LoggerImpl } from "../utils/Logger";
 import { initControllerAndInject } from "./ExpressConf";
 
 export const inject = () => {

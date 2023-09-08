@@ -1,7 +1,7 @@
+import { AppLogger } from "../../utils/Logger";
 import { ApiProductInterface } from "../api/ApiProductInterface";
 import { Product } from "../model/Product";
 import { SPIProduct } from "../spi/SpiProduct";
-import { AppLogger } from "../utils/Logger";
 
 export class ApiProductService implements ApiProductInterface {
     constructor(private spiProductIn: SPIProduct, private logger: AppLogger){}

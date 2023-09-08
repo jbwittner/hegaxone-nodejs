@@ -1,7 +1,7 @@
 import { app } from "../../config/ExpressConf";
 import { Product } from "../../domain/model/Product";
 import { ApiProductService } from "../../domain/service/ProductService";
-import { AppLogger } from "../../domain/utils/Logger";
+import { AppLogger } from "../../utils/Logger";
 
 export const apiProductController = (apiProductService: ApiProductService, logger: AppLogger) => {
     app.get('/products', (_req, res) => {

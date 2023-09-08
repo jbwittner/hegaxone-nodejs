@@ -1,5 +1,5 @@
 import { SPIProduct } from "../../domain/spi/SpiProduct";
-import { AppLogger } from "../../domain/utils/Logger";
+import { AppLogger } from "../../utils/Logger";
 
 export class ProductRepository implements SPIProduct {
 

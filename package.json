@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc ./src/*",
-    "start": "node ./build/index.js"
+    "build": "tsc",
+    "start": "node --es-module-specifier-resolution=node ./build/index.js"
   },
   "author": "",
   "license": "ISC",

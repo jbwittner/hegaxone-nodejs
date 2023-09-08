@@ -1,6 +1,6 @@
-import { initService } from "@domain/ProductService";
-import { Product } from "@domain/entity/Product";
-import { SPIProduct } from "@domain/spi/SpiProduct";
+import { initService } from "./domain/ProductService";
+import { Product } from "./domain/entity/Product";
+import { SPIProduct } from "./domain/spi/SpiProduct";
 
 const spiProductIn: SPIProduct = {
 
